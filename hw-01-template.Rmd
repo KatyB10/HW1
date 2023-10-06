@@ -1,6 +1,6 @@
 ---
-title: "hw-01"
-author: "Your Name (S000000)"
+title: "hw-01-s2479602"
+author: "katy bannister S2479602"
 date: "`r Sys.Date()`"
 output: html_document
 ---
@@ -20,6 +20,8 @@ library(lubridate)
 
 edibnb <- read_csv("data/edibnb.csv")
 council <- read_csv("data/council_assessments.csv")
+
+
 ```
 
 ------------------------------------------------------------------------------
@@ -28,19 +30,25 @@ council <- read_csv("data/council_assessments.csv")
 ## EXERCISE 1
 
 ```{r hw1-ex1}
-# remove this comment and add the code for Exercise 1 here
+print("Count of missing values by column wise") 
+sapply(edibnb, function(x) sum(is.na(x)))
 
+library(dplyr)
+df2 <- arrange(df, desc(review_scores_rating), desc(number_of_reviews) )
 ```
 
 
-_Remove this text, and add your answer for Exercise 1 here._
+
+1. price, neighbourhoods, bathrooms, bedrooms, beds, review scores rating
+2. 860170
+
 
 ------------------------------------------------------------------------------
 
 ## EXERCISE 2
 
 ```{r hw1-ex2}
-# remove this comment and add the code for Exercise 2 here
+
 
 ```
 
