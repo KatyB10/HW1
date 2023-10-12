@@ -31,10 +31,11 @@ council <- read_csv("data/council_assessments.csv")
 
 ```{r hw1-ex1}
 print("Count of missing values by column wise") 
-sapply(edibnb, function(x) sum(is.na(x)))
+sapply(edibnb, function(x) 
+sum(is.na(x)))
 
 library(dplyr)
-df2 <- arrange(df, desc(review_scores_rating), desc(number_of_reviews) )
+
 ```
 
 
